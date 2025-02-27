@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.athyagarajan'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    // Reference the JAR correctly
+    implementation files('libs/jll-1.0.0.jar')
+    implementation files('libs/jll-1.0.0')
+}
+
+test {
+    useJUnitPlatform()
+}
