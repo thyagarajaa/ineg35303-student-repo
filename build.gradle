@@ -16,9 +16,7 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 
-    // Reference the JAR correctly
-    implementation files('libs/jll-1.0.0.jar')
-    implementation files('libs/jll-1.0.0')
+    implementation files('./libs/JLL-1.0.1.jar')
 }
 
 test {
